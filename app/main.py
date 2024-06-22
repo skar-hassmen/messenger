@@ -3,8 +3,12 @@ from fastapi import FastAPI
 
 from api import router as api_router
 from core.config import settings
+from lifespan import lifespan
 
-app = FastAPI()
+app = FastAPI(
+    lifespan=lifespan
+)
+
 app.include_router(
     api_router,
     prefix=settings.api.prefix
