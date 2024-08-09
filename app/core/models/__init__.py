@@ -3,5 +3,5 @@ __all__ = (
     'Base',
 )
 
-from .DataBaseHelper import db_helper
+from .db_helper import db_helper
 from .base import Base
